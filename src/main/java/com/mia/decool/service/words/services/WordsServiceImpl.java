@@ -33,6 +33,7 @@ public class WordsServiceImpl implements WordsService {
             // Since append() is an async method, the next line only adds the word to the queue, meaning it works in O(1).
             // => The time complexity of the entire method is O(<number of words in input>) and the mem complexity is O(1).
             wordsDao.append(word);
+            logger.debug("Added word {} to the queue.", word);
         }
         logger.info("Finished appending {} words.", words.size());
     }

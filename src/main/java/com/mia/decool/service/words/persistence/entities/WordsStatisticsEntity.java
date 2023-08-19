@@ -14,7 +14,7 @@ import java.util.List;
 @Data
 public class WordsStatisticsEntity implements Serializable {
 
-    // Since the assignment states that we do not need to consider extensibility, this class is not ineradicably critical.
+    // Since the assignment states that we do not need to consider extensibility, this class is not critical.
     // However, differentiating between the entity and the DTO is a good practice, so I have done so.
 
     private List<String> top5;

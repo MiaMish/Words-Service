@@ -15,12 +15,10 @@ The application is thread safe and can handle multiple requests at the same time
 
 ## How to build:
     mvn clean install
+Note: this command will run tests as well.
 
 ## Start application:
     java -jar target/words-stream-0.0.1-SNAPSHOT.jar
-
-## Link for quick check:
-    http://localhost:9080/articles
 
 ## Swagger interface:
     http://localhost:9080/swagger-ui.html
@@ -28,7 +26,15 @@ The application is thread safe and can handle multiple requests at the same time
 ## Useful CURL commands
 
 ### Add words
-    curl -X 'POST' 'http://localhost:9080/api/v1/words' -H 'accept: */*' -H 'Content-Type: application/json' -d '{"words": "word1, word2"}'
+    curl -X 'POST' \
+    'http://localhost:9080/api/v1/words' \
+    -H 'accept: */*' \
+    -H 'Content-Type: application/json' \
+    -d '{
+    "words": "string"
+    }'
 
 ### Get stats
-    curl -X 'GET' 'http://localhost:9080/api/v1/wordsStatistics' -H 'accept: */*'
+    curl -X 'GET' 
+    'http://localhost:9080/api/v1/wordsStatistics' 
+    -H 'accept: */*'
