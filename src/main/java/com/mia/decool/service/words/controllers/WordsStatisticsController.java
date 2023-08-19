@@ -21,21 +21,21 @@ public class WordsStatisticsController {
 
     @ApiOperation(value = "Add new words", response = WordsDto.class)
     @ApiResponses(value = {
-        @ApiResponse(code = 202, message = "Accepted new words"),
+            @ApiResponse(code = 202, message = "Accepted new words"),
     })
     @PostMapping(path = "/words")
     @ResponseStatus(HttpStatus.ACCEPTED)
     public void acceptWords(
-        @ApiParam("New words to add")
-        @Validated
-        @RequestBody WordsDto wordsDto
+            @ApiParam("New words to add")
+            @Validated
+            @RequestBody WordsDto wordsDto
     ) {
         wordsService.append(wordsDto);
     }
 
     @ApiOperation(value = "Get words statistics", response = WordsDto.class)
     @ApiResponses(value = {
-        @ApiResponse(code = 200, message = "Word statistics successfully retrieved")
+            @ApiResponse(code = 200, message = "Word statistics successfully retrieved")
     })
     @GetMapping("/wordsStatistics")
     public WordsStatisticsDto readWordStatistics() {

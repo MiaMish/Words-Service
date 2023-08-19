@@ -8,10 +8,10 @@ import org.springframework.core.env.Environment;
 @SpringBootApplication
 public class SpringBootTemplateApplication {
 
-	public static void main(String[] args) {
-		Environment env = new SpringApplication(SpringBootTemplateApplication.class)
-				.run(args)
-				.getEnvironment();
-		StartupHelper.logApplicationStartup(env);
-	}
+    public static void main(String[] args) {
+        Environment env = new SpringApplication(SpringBootTemplateApplication.class)
+                .run(args)
+                .getEnvironment();
+        StartupHelper.logApplicationStartup(env);
+    }
 }

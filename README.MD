@@ -1,4 +1,4 @@
-# Words counter
+# Words Service
 
 ## Description:
 This application is a simple REST service that has two endpoints:

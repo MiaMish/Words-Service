@@ -30,6 +30,7 @@ public class WordsDataStructureImpl implements WordsDataStructure {
      * If the word already exists, it will increment the frequency of the word.
      * If the word does not exist, it will add the word to the data structure with a frequency of 1.
      * Complexity: O(log(n))
+     *
      * @param word the word to append to the data structure
      */
     public void append(String word) {
@@ -45,6 +46,7 @@ public class WordsDataStructureImpl implements WordsDataStructure {
     /**
      * Returns the most frequent words in the data structure.
      * Complexity: O(numOfWordsToReturn)
+     *
      * @param numOfWordsToReturn the number of words to return
      * @return the most frequent words in the data structure
      */
@@ -58,6 +60,7 @@ public class WordsDataStructureImpl implements WordsDataStructure {
     /**
      * Returns the least frequent word in the data structure.
      * Complexity: O(1)
+     *
      * @return the least frequent word in the data structure
      */
     public int leastFrequent() {
@@ -71,6 +74,7 @@ public class WordsDataStructureImpl implements WordsDataStructure {
     /**
      * Returns the size of the data structure.
      * Complexity: O(1)
+     *
      * @return the size of the data structure
      */
     public int size() {
@@ -80,7 +84,8 @@ public class WordsDataStructureImpl implements WordsDataStructure {
     /**
      * Returns the word at the given index in the data structure.
      * Complexity: O(distance between the candidate and index)
-     * @param index the index of the word to return
+     *
+     * @param index     the index of the word to return
      * @param candidate the candidate word to compare against
      * @return the word at the given index in the data structure
      */
@@ -103,6 +108,7 @@ public class WordsDataStructureImpl implements WordsDataStructure {
 
     /**
      * Complexity: O(distance between the candidate and median)
+     *
      * @param medianCandidate the candidate word to compare against
      * @return the median word in the data structure
      */

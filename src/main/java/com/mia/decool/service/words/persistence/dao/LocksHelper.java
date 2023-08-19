@@ -37,9 +37,10 @@ public class LocksHelper {
      * Runs the supplier with a read lock on the full data structure and a write lock on the word.
      * This means that multiple threads can execute runWithLockOnWord() in parallel, but only one thread can execute it for a specific word.
      * In addition, if another thread is executing runWithLockOnDataStructure(), then all threads that are executing runWithLockOnWord() will wait for it to finish.
-     * @param word the word to lock on
+     *
+     * @param word     the word to lock on
      * @param supplier the supplier to run
-     * @param <T> the return type of the supplier
+     * @param <T>      the return type of the supplier
      * @return the return value of the supplier
      * @throws InterruptedException if the thread was interrupted while waiting for the lock
      */
@@ -71,8 +72,9 @@ public class LocksHelper {
      * This means that only one thread can execute runWithLockOnDataStructure() at a time.
      * In addition, if another thread is executing runWithLockOnWord(), then it will wait for it to finish.
      * While running the supplier, no other thread can execute runWithLockOnWord().
+     *
      * @param supplier the supplier to run
-     * @param <T> the return type of the supplier
+     * @param <T>      the return type of the supplier
      * @return the return value of the supplier
      */
     public <T> T runWithLockOnDataStructure(Supplier<T> supplier) {

@@ -14,8 +14,8 @@ import java.util.List;
 public class WordsServiceImpl implements WordsService {
 
     private static final Logger logger = LoggerFactory.getLogger(WordsServiceImpl.class);
-    private WordsDao wordsDao;
-    private WordsMapper wordsMapper;
+    private final WordsDao wordsDao;
+    private final WordsMapper wordsMapper;
 
     public WordsServiceImpl(WordsDao wordsDao, WordsMapper wordsMapper) {
         this.wordsDao = wordsDao;

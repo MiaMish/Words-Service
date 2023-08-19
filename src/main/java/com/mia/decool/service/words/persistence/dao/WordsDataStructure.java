@@ -11,9 +11,13 @@ import java.util.List;
 public interface WordsDataStructure {
 
     void append(String word);
+
     List<String> mostFrequent(int numOfWordsToReturn);
+
     int leastFrequent();
+
     int size();
+
     WordFrequency median(WordFrequency medianCandidate);
 
 }
